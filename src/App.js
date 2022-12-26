@@ -34,6 +34,7 @@ function App() {
           }
         })
         .then(res => {
+          console.log(res.data.results)
           setFlashcards(res.data.results.map((questionItem, index) => {
             const answer = decodeString(questionItem.correct_answer)
             const options = [
